@@ -3,6 +3,7 @@ import Home from './screens/Home';
 import About from './screens/About';
 import ReviewDetails from './screens/ReviewDetails'
 import {AppLoading}  from 'expo'
+import Navigator from './routes/homeStack'
 
 import * as Font from 'expo-font';
 
@@ -16,8 +17,8 @@ export default function App () {
 
   if (fontsLoaded) {
     return (
-      <Home />
-    );
+     <Navigator/>
+    ); 
   } else {
     return (
       <AppLoading
