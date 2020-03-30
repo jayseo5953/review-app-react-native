@@ -42,7 +42,7 @@ const ReviewForm = (props) => {
             <Text style={globalStyles.errorText}>{props.touched.title && props.errors.title}</Text>
 
             <TextInput
-              multipline
+              multiline height={100}
               style={globalStyles.input}
               placeholder="Review body"
               onChangeText={props.handleChange("body")}
