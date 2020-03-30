@@ -1,36 +1,46 @@
 import React from 'react'
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../screens/Home';
 import ReviewDetails from '../screens/ReviewDetails';
+import Header from '../shared/Header';
+import { MaterialIcons } from '@expo/vector-icons';
+import {TouchableOpacity, Text} from 'react-native'
 
-const Stack = createStackNavigator();
+import Icon from 'react-native-vector-icons/Ionicons'
 
-export default function Navigator () {
+const HomeStack = createStackNavigator();
+
+export default function HomeScreen ({navigation}) {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
+      <HomeStack.Navigator
         initialRouteName='Home'
         screenOptions={{ 
           gestureEnabled: false,
-          headerTintColor:'white',
+          headerTintColor:'#333',
           headerStyle:{
-            backgroundColor:'coral', 
+            backgroundColor:'#eee', 
             height:80
-          }
+          },
+          headerTitleAlign: "center" 
         }}
       >
-        <Stack.Screen
+        <HomeStack.Screen
           name='Home'
           component={Home}
-          options={{title:'Game Zone'}}
+          options={{
+            headerTitle: ()=> <Header navigation={navigation} title={'Game Zone'}/>,
+          // headerLeft: () => (
+          //   <TouchableOpacity>
+          //    <MaterialIcons name="menu" size={25} backgroundColor='#eee' color='#333' style={{marginLeft:5}} onPress={()=>navigation.openDrawer()}/>
+          //   </TouchableOpacity>
+          // )
+        }}
         />
-        <Stack.Screen
+        <HomeStack.Screen
           name='ReviewDetails'
           component={ReviewDetails}
           options={{title:'Review'}}
         />
-      </Stack.Navigator>
-    </NavigationContainer>
+      </HomeStack.Navigator>
   )
 }

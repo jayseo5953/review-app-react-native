@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
-import Home from './screens/Home';
-import About from './screens/About';
-import ReviewDetails from './screens/ReviewDetails'
 import {AppLoading}  from 'expo'
-import Navigator from './routes/homeStack'
+import RootNavigator from './routes/drawer'
 
 import * as Font from 'expo-font';
 
@@ -17,7 +14,7 @@ export default function App () {
 
   if (fontsLoaded) {
     return (
-     <Navigator/>
+     <RootNavigator/>
     ); 
   } else {
     return (
