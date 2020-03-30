@@ -33,6 +33,7 @@ const ReviewForm = (props) => {
         {props => (
           <View>
             <TextInput
+              multiline
               style={globalStyles.input}
               placeholder="Review title"
               onChangeText={props.handleChange("title")}
@@ -52,6 +53,7 @@ const ReviewForm = (props) => {
             <Text style={globalStyles.errorText}>{props.touched.body && props.errors.body}</Text>
 
             <TextInput
+              multiline
               style={globalStyles.input}
               placeholder="Review 1-5"
               onChangeText={props.handleChange("rating")}
