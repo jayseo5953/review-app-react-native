@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Button, View, TextInput} from "react-native";
+import { StyleSheet, Button, View, Text, TextInput} from "react-native";
 import { globalStyles } from "../styles/global";
 import { Formik } from "formik";
 import * as yup from "yup"
@@ -36,21 +36,30 @@ const ReviewForm = (props) => {
               placeholder="Review title"
               onChangeText={props.handleChange("title")}
               value={props.values.title}
+              onBlur={props.handleBlur('title')}
             />
+            <Text style={globalStyles.errorText}>{props.touched.title && props.errors.title}</Text>
+
             <TextInput
               multipline
               style={globalStyles.input}
               placeholder="Review body"
               onChangeText={props.handleChange("body")}
               value={props.values.body}
+              onBlur={props.handleBlur('body')}
             />
+            <Text style={globalStyles.errorText}>{props.touched.body && props.errors.body}</Text>
+
             <TextInput
               style={globalStyles.input}
               placeholder="Review 1-5"
               onChangeText={props.handleChange("rating")}
               value={props.values.rating}
               keyboardType='numeric'
+              onBlur={props.handleBlur('rating')}
             />
+            <Text style={globalStyles.errorText}>{props.touched.rating && props.errors.rating}</Text>
+
             <Button title='submit' color='maroon' onPress={props.handleSubmit} />
           </View>
      

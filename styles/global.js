@@ -29,7 +29,14 @@ export const globalStyles = StyleSheet.create({
     padding:10,
     fontSize:17,
     borderRadius:6,
-    marginBottom:15
+    // marginBottom:10
+  },
+  errorText: {
+    color:'crimson',
+    fontWeight:'bold',
+    marginLeft:5,
+    marginBottom:20,
+    // textAlign:'center'
   }
 })
 
