@@ -19,7 +19,6 @@ export default function HomeScreen ({navigation}) {
           headerTintColor:'#333',
           headerStyle:{
             backgroundColor:'#eee', 
-            height:80
           },
           headerTitleAlign: "center" 
         }}

@@ -9,7 +9,7 @@ const About = () => {
       <Text style={{fontWeight:'bold'}}>About: </Text>
       <Card>
         <Text>
-          The Legend of Zelda is an action-adventure video game franchise created by Japanese game designers Shigeru Miyamoto and Takashi Tezuka.The gameplay incorporates action-adventure and elements of action RPG games.
+          The Legend of Zelda is an action-adventure video game franchise created by Japanese game designers Shigeru Miyamoto and Takashi Tezuka.
         </Text>
       </Card>
     </View>
