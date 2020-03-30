@@ -2,6 +2,8 @@ import React from 'react'
 import { StyleSheet, Text, View, Button, Image, Alert } from 'react-native'
 import {globalStyles, images} from '../styles/global';
 import Card from '../shared/Card'
+import FlatButton from '../shared/Button'
+
 
 const ReviewDetails = ({navigation, route}) => {
 
@@ -20,7 +22,8 @@ const ReviewDetails = ({navigation, route}) => {
         </View>
       </Card>
       <View style={styles.deleteButton}>
-        <Button title={'Delete'} color='maroon' onPress={()=>{
+        
+        <FlatButton text='Delete' onPress={()=>{
           // deleteReview(item.key);
           // navigation.goBack();
           Alert.alert(
@@ -60,7 +63,7 @@ const styles = StyleSheet.create({
   },
   deleteButton:{
     marginTop:5,
-    width:70, 
+    // width:80,
     alignSelf:"flex-end"
   }
 })
